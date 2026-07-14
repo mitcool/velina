@@ -34,7 +34,7 @@
                 <span class="fa fa-pencil-square-o"></span>
             </a>
         </li>
-        <li class="{{ request()->route()->getName() =='contact' ? ' current_page_item ' : '' }} menu-item-simple-parent">
+        <li>
             @if(app()->currentLocale()=='en')
             <a href="{{ route('change-language','en') }}" rel="nofollow">
                  BG
