@@ -28,7 +28,7 @@ Route::middleware(['setLocale'])->group(function () {
     Route::get('/about', [ShopController::class, 'about'])->name('about');
 });
 
-
+Route::post('/contact',[ShopController::class, 'contactPost'])->name('contact-post')->middleware('throttle:5,1');;
 
 Route::get('change-language/{lang}',[ShopController::class,'changeLanguage'])->name('change-language');
 

@@ -7,6 +7,10 @@ use Illuminate\Validation\Rule;
 use App\Models\PictureCategory;
 use App\Models\Artwork;
 
+use Mail;
+
+use App\Mail\ContactEmail;
+
 
 class ShopController extends Controller
 {
@@ -89,6 +93,8 @@ class ShopController extends Controller
 
     public function updateArtwork(Request $request,$id){
         $artwork = $request->validate($this->artworkRules());
+
+        
         if($request->hasFile('file')){
             $path = base_path()."/public/images/artwork";
             $artwork['image'] = $this->upload_file($request->file('file'),$path);
@@ -96,7 +102,7 @@ class ShopController extends Controller
         
         $artwork['price'] = 300;
         $artwork['stock'] = 1;
-        $artwork['is_selected'] = $request->boolean('is_selected');
+        $artwork['is_selected'] = $request->is_selected ? 1 : 0;
         Artwork::findOrFail($id)->update($artwork);
         return redirect()->back();
     }
@@ -117,12 +123,31 @@ class ShopController extends Controller
                 ),
             ],
             'file' => [$imageRequired ? 'required' : 'nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:5120'],
-            'is_selected' => ['nullable', 'accepted'],
+            'is_selected' => ['nullable'],
         ];
     }
 
     public function deleteArtwork($id){
         Artwork::find($id)->delete();
         return redirect()->route('edit-gallery')->with('success_message','Снимката е изтрита успешно');
+    }
+
+    public function contactPost(Request $request){
+        if ($request->filled('website')) {
+            abort(403);
+        }
+        $request->validate([
+            'name' => 'required|string|max:100',
+            'email' => 'required|email:rfc,dns',
+            'message' => 'required|string|max:3000',
+        ]);
+        $data = $request->only('name','email','message');
+        try{
+            Mail::to('velinagrebenska@gmail.com')->send(new ContactEmail($data));
+        }catch(\Exception $e){
+            info($e->getMessage());
+        }
+
+        return redirect()->back();
     }
 }

@@ -11,7 +11,8 @@
                 </div>
                  <h4 style="text-align: center"> {{ trans('contact.subheading') }}</h4>
                  <div style="display: flex;justify-content:center">
-                    <form method="post" style="margin:0 auto" class="mailchimp-form dt-sc-three-fourth" name="frmnewsletter" action="php/subscribe.php">	
+                    <form method="POST" style="margin:0 auto" class="mailchimp-form dt-sc-three-fourth" action="{{ route('contact-post') }}">
+                        {{ csrf_field() }}	
                         <p class="input-text">
                             <input class="input-field" type="text" name="name" value="" required/>
                             <label class="input-label">
@@ -29,12 +30,17 @@
                             
                         </p>
                         <p class="input-text">
-                            <textarea class="input-field" name="email" value="" rows="10" required></textarea>
+                            <textarea class="input-field"  name="message"  rows="10" required></textarea>
                             <label class="input-label">
                                 <i class="fa fa-envelope-o icon"></i>
                                 <span class="input-label-content">{{ trans('contact.message') }}</span>
                             </label>
                         </p>
+                        <input type="text"
+                                name="website"
+                                tabindex="-1"
+                                autocomplete="off"
+                                style="display:none">
                         <div style="text-align: center;">
                             <button class="send-btn">{{ trans('contact.send') }}</button>
                         </div>

@@ -9,6 +9,9 @@
         <form class="bg-white p-6 rounded-2xl shadow-md w-full max-w-md space-y-4 mx-auto" action="{{ route('update-artork',$artwork->id) }}" method="POST" enctype="multipart/form-data">
           {{ csrf_field() }}
             <h2 class="text-2xl font-semibold text-gray-800">Редактирай картина</h2>
+            @if($errors->all())
+              <p class="text-red">{{ $errors->all()[0] }}</p>
+            @endif
 
     <div>
       <label class="block text-sm font-medium text-gray-700 mb-1">Име на картината (Български)</label>

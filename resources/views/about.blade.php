@@ -181,3 +181,113 @@
 </div>
     
 @endsection
+
+
+{{-- # About Me
+
+## Artistic Biography of Velina Grebenska
+
+### Education
+
+* **2002** – Master's Degree in **Pedagogy of Fine Arts**, specializing in **Painting**, Faculty of Fine Arts, **St. Cyril and St. Methodius University of Veliko Tarnovo**, Bulgaria.
+* **1997** – Graduated from **Emiliyan Stanev Secondary School**, specialized Fine Arts program, Veliko Tarnovo, Bulgaria.
+
+Since **2003**, Velina Grebenska has lived and worked in **Varna, Bulgaria**.
+
+## Solo Exhibitions
+
+* **2008** – *Like a Game* – joint exhibition with Kremena Tsankova, Boris Georgiev City Art Gallery, Varna.
+* **2011** – Drawing Exhibition (Pencil and Pastel), Art Department, P. R. Slaveykov Regional Library, Varna.
+* **2014** – Oil Painting Exhibition, Ekenäs, Finland.
+* **2017** – *Watercolor*, Graffit Gallery, Varna.
+* **2017** – *Layers* – joint exhibition with Galina Staneva (Drawing and Sculpture).
+* **2020** – *Moments* – Solo Oil Painting Exhibition, Georgi Velchev Art Museum, Varna.
+* **2021** – *Pulse* – Solo Dry Pastel Exhibition, Resonance Gallery, Plovdiv.
+* **2021** – Solo Dry Pastel Exhibition, Yuka Gallery, Varna.
+* **2022** – *Captured Spaces* – Solo Dry Pastel Exhibition, Georgi Velchev Art Museum, Varna, supported by the National Culture Fund.
+
+## Group Exhibitions
+
+* **2006** – National Exhibition of Artist-Educators, Veliko Tarnovo.
+* **2009–2010** – *Discovery* Exhibition for Young Artists, Active Art Gallery, Varna.
+* **2011** – *BG 08 – DE 80* Exhibition of Young Artists from Germany, North Macedonia and Bulgaria, National Assembly, Sofia.
+* **2011** – International Exhibition *Balkan Drawing*, North Macedonia.
+* **2012** – 6th International Pastel Biennale, Nowy Sącz, Poland.
+* **2012** – *Ladies Invite*, Yuka Gallery, Varna.
+* **2013** – National Exhibition *Ludogorie*, Razgrad.
+* **2013, 2015** – National Drawing Biennale, Veliko Tarnovo.
+* **2015** – 18th International Print Biennale, Varna.
+* **2015** – Exhibition of Varna Artists, City Gallery, Balchik.
+* **2016** – *Small Forms* Exhibition, Dobrich.
+* **2016, 2018, 2020** – International Biennale of Small Forms, Pleven.
+* **2016** – Installation in *Beyond Comfort*, Golden Sands Resort, organized by Resonance Gallery, Plovdiv.
+* **2016** – *Five Elements* Exhibition, Montreal, Canada.
+* **2016** – Allianz Bulgaria Competition Exhibition for Painting, Sculpture and Printmaking.
+* **2016** – *Drawing and Sculpture*, Shipka 6 Gallery, Sofia.
+* **2017** – 19th International Print Biennale, Varna.
+* **2017** – National Print Exhibition in memory of Georgi Gerasimov, Pazardzhik.
+* **2017** – *Lyrical Messages*, Graffit Gallery, Varna.
+* **2018** – Wednesday 5 Art Group Exhibition.
+* **2018** – Installation in *Beyond Comfort*, Golden Sands Resort.
+* **2018** – *100 Views of Plovdiv*, Matera, Italy.
+* **2018** – Exhibition of Bulgarian Artists, Barcelona, Spain.
+* **2018** – *Capsule of Resonance* – 10 Years of Resonance Gallery, Plovdiv.
+* **2019** – 20th International Print Biennale, Varna.
+* **2019** – Wednesday 5 Art Group Exhibition.
+* **2019** – *100 Views of Plovdiv*, Resonance Gallery, Plovdiv.
+* **2019** – National Exhibition *Creating Together*, Vidima Gallery, Sevlievo.
+* **2020** – National Exhibition *Spring Salon*, Gabrovo.
+* **2020** – Bulgarian–Italian Print Exhibition *Mirror. Face to Face*, Florence, Burgas and Stara Zagora.
+* **2020** – 10th International Biennale of Small Forms, Pleven.
+* **2021** – 21st International Print Biennale, Varna.
+* **2021** – National Exhibition *Spring Salon*, Gabrovo.
+* **2021** – International Biennale *The Art of Miniature*, Ruse.
+* **2021** – *Wine and Love* Exhibition, Gorna Oryahovitsa.
+* **2022** – National Exhibition *Spring Salon*, Gabrovo.
+* **2022** – National Exhibition *Friends of the Sea*, Burgas.
+* **2022** – 11th International Biennale of Small Forms, Pleven.
+* **2023** – 10th Festival of Visual Arts *August in Art*, Varna.
+* **2023** – National Exhibition *Ludogorie*, Razgrad.
+* **2023** – Biennale of Small Forms, Pleven.
+* **2023** – National Exhibition *Spring Salon*, Gabrovo.
+* **2023** – Fourth Abstract Art Competition, A-Cube Gallery, Sofia.
+* **2023** – National Print Exhibition in memory of Georgi Gerasimov, Pazardzhik.
+* **2023** – 9th International Biennale *The Art of Miniature*, Ruse.
+* **2024** – National Exhibition *The Land of Botev*, Vratsa.
+* **2024** – Bulgarian–Dutch Exhibition *Passengers Between Two Seas*, City Gallery, Varna.
+* **2024** – 6th Balkan Quadriennial of Painting, Stara Zagora.
+* **2025** – 23rd International Print Biennale, Varna.
+* **2025** – 10th International Biennale *The Art of Miniature*, Ruse.
+* **2025** – *Fragments of Paintings* – Exhibition of Six Artists, Gallery 65, Sofia.
+
+## Projects
+
+* **2022** – Recipient of a Creative Scholarship from the National Culture Fund.
+* **2020** – Participant in the *Behind the Mask* project with 24 artists from Varna, initiated by Plamena Racheva, Dimitar Traychev and Nina Lokmadzhieva.
+* **2018** – *Greenhouse for Thoughts* – Public art installation (2.80 × 2.30 × 6 m), funded by the Culture Fund of the Municipality of Varna.
+* **2015** – Stage design for *A White Fairy Tale* by Valeri Petrov, Phoenix Theatre Company.
+* **2014–2015** – Mural painting (2.40 × 4.80 m).
+* **2014** – Illustrations for the book *Dog Days over the Black Sea*.
+* **2009** – Art instructor for the project *Art for Everyone. Everyone for Art* for disadvantaged youth.
+* **2008** – Art instructor for the project *Creating Beauty Together* for disadvantaged children and youth.
+* **2008** – Participant in the *Self-Portraits of Varna Artists* project, Active Art Gallery.
+* **2008** – Participant in the *Under the Umbrella of Art* project, organized by art historian Plamena Racheva.
+* **2007** – Collaborative mural project with students at Drugarche Children's Home, Varna.
+* **2005** – Set and costume design for *We, the Sparrows* by Yordan Radichkov.
+
+## Artist Residencies and Plein Air Events
+
+* **2023** – Varna Artists' Plein Air, Fichoza, Varna.
+* **2022** – National Painting Plein Air, Oryahovo.
+* **2021** – National Painting Plein Air, Vetren.
+* **2021** – Painting Plein Air, Byala.
+* **2016** – Nikola Marinov International Watercolor Plein Air, Targovishte.
+* **2012** – International Plein Air, Počitelj, Bosnia and Herzegovina.
+* **2011** – International Painting Plein Air, Bitola, North Macedonia.
+* **2010** – Plein Air, Asparuhovo District, Varna.
+* **2009** – National Painting Plein Air, Krapets.
+
+## Awards
+
+* **2024** – Award from the Exhibition of the Association of Varna Artists. --}}
+
