@@ -1,5 +1,11 @@
 @extends('layout')
 
+@section('seo')
+    <title>{{ trans('gallery.meta-title') }}  {{ $category ? ' | '.$category->name() : '' }}</title>
+    <meta name="description" content="{{ trans('gallery.meta-descriptions') }}">
+    <meta name="author" content="Velina Grebenska">
+@endsection
+
 @section('content')
 <!-- **Wrapper** -->
 <div class="wrapper">
@@ -7,7 +13,7 @@
         <div id="main">
             <div class="container" style="margin-top:200px;">
                 <div class="main-title"">
-                    <h3> {{ trans('welcome.gallery') }} {{ $category ? $category->name : '' }}</h3>
+                    <h3> {{ trans('welcome.gallery') }} {{ $category ? $category->name() : '' }}</h3>
                 </div>
             </div>
             @if($category)

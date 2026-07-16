@@ -1,5 +1,11 @@
 @extends('layout')
 
+  @section('seo')
+    <title>{{ trans('contact.meta-title') }}</title>
+    <meta name="description" content="{{ trans('contact.meta-descriptions') }}">
+    <meta name="author" content="Velina Grebenska">
+    @endsection
+
 @section('content')
 <!-- **Wrapper** -->
 <div class="wrapper">

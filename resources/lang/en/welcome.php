@@ -17,7 +17,7 @@ return [
     'oil-description' => 'Маслената живопис свързвам със силата. Тук има плътност, по- категоричен изказ, цветовете са много по-изразителни. В тази техника силата на експресията е най-голяма като на моменти може да граничи с релефно напластяване като при скулптурно изображение. 
 ',
     'other-description' => '',
-    'meta-title' => '',
-    'meta-description' => '',
+    'meta-title' => 'Velina Grebenska | Original Paintings & Contemporary Art',
+    'meta-description' => 'Discover original paintings and contemporary artwork by GrebenskArt. Explore unique collections, handcrafted art, and timeless pieces for your home or office.',
 
 ];

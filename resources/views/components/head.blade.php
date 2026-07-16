@@ -10,13 +10,8 @@
     
 	@yield('seo')
 
-
-	
-	<!--[if lt IE 9]>
-	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
     
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />    
+    <link rel="shortcut icon" href="{{ asset('images/favicon.jpg') }}" type="image/x-icon" />    
     
     <!-- **CSS - stylesheets** -->
 	<link id="default-css" rel="stylesheet" href="{{ asset('style.css') }}" type="text/css" media="all" />

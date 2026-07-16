@@ -1,8 +1,8 @@
 @extends('layout')      
 
        @section('seo')
-        <title>Velina Grebenska</title>
-        <meta name="description" content="">
+        <title>{{ trans('welcome.meta-title') }}</title>
+        <meta name="description" content="{{ trans('welcome.meta-descriptions') }}">
         <meta name="author" content="Velina Grebenska">
        @endsection
        @section('content')
