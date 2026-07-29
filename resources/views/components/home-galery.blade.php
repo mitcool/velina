@@ -12,7 +12,7 @@
                                     alt="" 
                                     title="" 
                                     style="width: auto;height:500px;margin:0 auto;" 
-                                    loading="lazy"
+                                   
                                 />
                             </li>
                         @endforeach
@@ -51,7 +51,7 @@
                                 alt="" 
                                 title="" 
                                 style="width: auto;height:500px;margin:0 auto;"  
-                                loading="lazy"
+                               
                             />
                         </li>
                         @endforeach
@@ -70,7 +70,7 @@
                                     src="{{ asset('images/artwork') }}/{{ $masleni_artwork->image }}" 
                                     alt="" 
                                     title="" style="width: auto;height:500px;margin:0 auto;"  
-                                    loading="lazy"
+                                   
                                 />
                             </li>
                         @endforeach
@@ -108,7 +108,7 @@
                                     alt="" 
                                     title="" 
                                     style="width: auto;height:500px;margin:0 auto;"  
-                                    loading="lazy" />
+                                    />
                             </li>
                         @endforeach
                     </ul>

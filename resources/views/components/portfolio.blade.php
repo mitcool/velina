@@ -19,7 +19,7 @@
                 @foreach($artworks as $artwork)
                 <div class="portfolio {{ $artwork->category->class }} still-life dt-sc-one-fourth">
                     <figure>
-                        <img src="{{ asset('images/artwork') }}/{{ $artwork->image }}" alt="" title="" loading="lazy">
+                        <img src="{{ asset('images/artwork') }}/{{ $artwork->image }}" alt="" title="" >
                         <figcaption>
                             <div class="portfolio-detail">
                                 <div class="views">
@@ -27,7 +27,8 @@
                                 </div>
                                 <div class="portfolio-title">
                                     <h5 style="color:white">{{ $artwork->name() }}</a></h5>
-                                    <p style="color:white">{{ $artwork->description() }}</p>
+                                  
+                                    <a style="color:white" href="{{ route('single-artwork',$artwork->id) }}">See More</a>
                                 </div>
                             </div>
                         </figcaption>

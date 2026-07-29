@@ -7,11 +7,11 @@
        @endsection
        @section('content')
         <div class="slider-container">
-            <div class="slider fullwidth-section parallax" style="background-size:cover;"></div>
+            <div fetchpriority="high" class="slider fullwidth-section parallax" style="background-size:cover;"></div>
         </div>
         {{-- <img src="{{ asset('images/artwork/1.jpg') }}" alt="" style="width: 100%"> --}}
         <div id="main">
-			<section id="primary" class="content-full-width"> <!-- **Primary Starts Here** -->  
+			<section id="primary" class="content-full-width"  > <!-- **Primary Starts Here** -->  
                       
             	<div class="dt-sc-hr-invisible-small"></div>
                 

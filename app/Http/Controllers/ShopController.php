@@ -10,7 +10,7 @@ use App\Models\Artwork;
 use Mail;
 
 use App\Mail\ContactEmail;
-
+use App\Mail\MoreInformationEmail;
 
 class ShopController extends Controller
 {
@@ -144,6 +144,33 @@ class ShopController extends Controller
         $data = $request->only('name','email','message');
         try{
             Mail::to('velinagrebenska@gmail.com')->send(new ContactEmail($data));
+        }catch(\Exception $e){
+            info($e->getMessage());
+        }
+
+        return redirect()->back();
+    }
+
+    public function show($id){
+        $artwork = Artwork::find($id) ?? about(404);
+        return view('single-artwork')
+            ->with('artwork',$artwork);
+    }
+
+    public function moreInformation(Request $request,$artwork_id){
+        if ($request->filled('website')) {
+            abort(403);
+        }
+        $artwork = Artwork::find($artwork_id) ?? abourt(404);
+
+        $request->validate([
+            'name' => 'required|string|max:100',
+            'email' => 'required|email:rfc,dns',
+            'message' => 'required|string|max:3000',
+        ]);
+        $data = $request->only('name','email','message','artwork');
+        try{
+            Mail::to('velinagrebenska@gmail.com')->send(new MoreInformationEmail($data));
         }catch(\Exception $e){
             info($e->getMessage());
         }
