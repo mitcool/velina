@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('seo')
-    <title>{{ trans('gallery.meta-title') }}  {{ $category ? ' | '.$category->name() : '' }}</title>
+    <title>{{ trans('gallery.meta-title') }}{{ $category ? ' | '.$category->name() : '' }}</title>
     <meta name="description" content="{{ trans('gallery.meta-description') }}">
     <meta name="author" content="Velina Grebenska">
 @endsection
@@ -37,6 +37,7 @@
                                             <div class="portfolio-title">
                                                 <h5 style="color:white !important;">{{ $artwork->name() }}</h5>
                                                 <p style="color:white;">{{ $artwork->description() }}</p>
+                                                <a style="color:white" href="{{ route('single-artwork',$artwork->slug) }}">{{ trans('welcome.see-more') }}</a>
                                             </div>
                                         </div>
                                     </figcaption>                                        

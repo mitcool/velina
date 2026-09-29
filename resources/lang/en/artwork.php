@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'meta-description' => '":name" – an original artwork by Velina Grebenska. Contact the artist about availability, pricing and shipping.',
     'share' => 'Share',
     'share-facebook' => 'Share on Facebook',
     'share-reddit' => 'Share on Reddit',

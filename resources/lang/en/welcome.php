@@ -18,6 +18,6 @@ return [
     'oil-description' => 'I associate oil painting with strength. There is density here, a more decisive expression, and the colors are far more vivid. In this technique the power of expression is at its greatest, at times bordering on relief-like layering, as in a sculptural image.',
     'other-description' => '',
     'meta-title' => 'Velina Grebenska | Original Paintings & Contemporary Art',
-    'meta-description' => 'Discover original paintings and contemporary artwork by GrebenskArt. Explore unique collections, handcrafted art, and timeless pieces for your home or office.',
+    'meta-description' => 'Discover original paintings and contemporary artwork by Velina Grebenska. Explore unique collections, handcrafted art, and timeless pieces for your home or office.',
 
 ];

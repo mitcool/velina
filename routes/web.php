@@ -33,11 +33,13 @@ Route::middleware(['setLocale'])->group(function () {
 });
 Route::get('change-language/{lang}',[ShopController::class,'changeLanguage'])->name('change-language');
 
-Route::get('/edit-gallery',[ShopController::class,'editGallery'])->name('edit-gallery');
-Route::post('/add-picture',[ShopController::class,'addPicture'])->name('add-picture');
-Route::get('/arwork/edit/{id}',[ShopController::class,'editSingleArtwork'])->name('edit-single-artwork');
-Route::post('/artwork/update/{id}',[ShopController::class,'updateArtwork'])->name('update-artork');
-Route::post('/artwork/delete/{id}',[ShopController::class,'deleteArtwork'])->name('delete-artwork');
+Route::middleware('auth')->group(function () {
+    Route::get('/edit-gallery',[ShopController::class,'editGallery'])->name('edit-gallery');
+    Route::post('/add-picture',[ShopController::class,'addPicture'])->name('add-picture');
+    Route::get('/arwork/edit/{id}',[ShopController::class,'editSingleArtwork'])->name('edit-single-artwork');
+    Route::post('/artwork/update/{id}',[ShopController::class,'updateArtwork'])->name('update-artork');
+    Route::post('/artwork/delete/{id}',[ShopController::class,'deleteArtwork'])->name('delete-artwork');
+});
 
 Route::prefix('admin')->middleware('auth')->name('admin.')->group(function () {
     Route::resource('artworks', ArtworkController::class);

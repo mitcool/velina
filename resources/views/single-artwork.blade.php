@@ -1,8 +1,8 @@
 @extends('layout')
 
 @section('seo')
-    <title>{{ $artwork->name_en }} | {{ $artwork->name }} | velinagrebenska.com</title>
-    <meta name="description" content="">
+    <title>{{ $artwork->name() }} | {{ trans('welcome.velina') }}</title>
+    <meta name="description" content="{{ Str::limit(trim(strip_tags($artwork->description())) ?: trans('artwork.meta-description', ['name' => $artwork->name()]), 160) }}">
     <meta name="author" content="Velina Grebenska">
 @endsection
 

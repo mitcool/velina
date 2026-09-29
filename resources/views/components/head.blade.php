@@ -8,7 +8,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     
-	@yield('seo')
+	@hasSection('seo')
+		@yield('seo')
+	@else
+		<title>{{ trans('welcome.meta-title') }}</title>
+		<meta name="description" content="{{ trans('welcome.meta-description') }}">
+	@endif
 
     
     <link rel="shortcut icon" href="{{ asset('images/favicon.jpg') }}" type="image/x-icon" />    

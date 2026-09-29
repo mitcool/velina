@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'meta-description' => '„:name“ – оригинална творба на Велина Гребенска. Свържете се с художника за наличност, цена и доставка.',
     'share' => 'Сподели',
     'share-facebook' => 'Сподели във Facebook',
     'share-reddit' => 'Сподели в Reddit',

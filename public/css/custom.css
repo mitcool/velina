@@ -20,3 +20,27 @@
 .footer-social-media .fa{
     margin:0 10px;
 }
+
+/* Home gallery sliders: smaller slides on mobile (overrides inline styles) */
+@media only screen and (max-width: 768px) {
+    /* Always text first, then slider */
+    .blog-section .blog-entry{
+        display: flex;
+        flex-direction: column;
+    }
+    .blog-section .blog-entry .entry-details{
+        order: 1;
+    }
+    .blog-section .blog-entry .entry-thumb{
+        order: 2;
+    }
+    .blog-section .blog-slider li{
+        min-height: 200px !important;
+    }
+    .blog-section .blog-slider li img{
+        width: 70% !important;
+        height: auto !important;
+        align-self: center;
+        object-fit: contain;
+    }
+}
