@@ -2,7 +2,7 @@
 
   @section('seo')
     <title>{{ trans('contact.meta-title') }}</title>
-    <meta name="description" content="{{ trans('contact.meta-descriptions') }}">
+    <meta name="description" content="{{ trans('contact.meta-description') }}">
     <meta name="author" content="Velina Grebenska">
     @endsection
 
@@ -12,7 +12,7 @@
 	<div class="inner-wrapper">
         <div id="main">
             <div class="container" style="margin-top:200px;">
-                <div class="main-title"">
+                <div class="main-title">
                     <h3> {{ trans('contact.heading') }}</h3>
                 </div>
                  <h4 style="text-align: center"> {{ trans('contact.subheading') }}</h4>

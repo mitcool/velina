@@ -2,17 +2,15 @@
 
 @section('seo')
     <title>{{ trans('gallery.meta-title') }}  {{ $category ? ' | '.$category->name() : '' }}</title>
-    <meta name="description" content="{{ trans('gallery.meta-descriptions') }}">
+    <meta name="description" content="{{ trans('gallery.meta-description') }}">
     <meta name="author" content="Velina Grebenska">
 @endsection
 
 @section('content')
-<!-- **Wrapper** -->
-<div class="wrapper">
-	<div class="inner-wrapper">
+{{-- #main is closed in the footer component --}}
         <div id="main">
             <div class="container" style="margin-top:200px;">
-                <div class="main-title"">
+                <div class="main-title">
                     <h3> {{ trans('welcome.gallery') }} {{ $category ? $category->name() : '' }}</h3>
                 </div>
             </div>
@@ -35,7 +33,6 @@
                                         <div class="portfolio-detail">
                                             <div class="views">
                                                 <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]" href="{{ asset('images/artwork/') }}/{{ $artwork->image }}"></a>
-                                                <a href="">test</a>
                                             </div>
                                             <div class="portfolio-title">
                                                 <h5 style="color:white !important;">{{ $artwork->name() }}</h5>
@@ -49,6 +46,4 @@
                     </div>
                 </div>
             </div>
-         </div>
-        </div>
 @endsection

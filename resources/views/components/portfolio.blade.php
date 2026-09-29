@@ -26,9 +26,9 @@
                                     <a class="fa fa-camera-retro" data-gal="prettyPhoto[gallery]" href="{{ asset('images/artwork') }}/{{ $artwork->image }}"></a><span>{{ count($artwork->category->artworks) }}</span>
                                 </div>
                                 <div class="portfolio-title">
-                                    <h5 style="color:white">{{ $artwork->name() }}</a></h5>
-                                  
-                                    <a style="color:white" href="{{ route('single-artwork',$artwork->id) }}">See More</a>
+                                    <h5 style="color:white">{{ $artwork->name() }}</h5>
+
+                                    <a style="color:white" href="{{ route('single-artwork',$artwork->slug) }}">{{ trans('welcome.see-more') }}</a>
                                 </div>
                             </div>
                         </figcaption>

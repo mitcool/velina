@@ -2,7 +2,7 @@
 
        @section('seo')
         <title>{{ trans('welcome.meta-title') }}</title>
-        <meta name="description" content="{{ trans('welcome.meta-descriptions') }}">
+        <meta name="description" content="{{ trans('welcome.meta-description') }}">
         <meta name="author" content="Velina Grebenska">
        @endsection
        @section('content')
@@ -34,14 +34,10 @@
                             </div>
                             
                             <div class="dt-sc-one-half column">
-                                <h3 class="animate" data-animation="fadeInLeft" data-delay="200"> Образование</h3>
-                                <p>2002г - Факултет &quot;Изобразителни изкуства&quot; към ВТУ &quot;Св.св. Кирил и Методий&quot; ,
-Магистър “Педагогика на изобразителното изкуство”, специалност “Живопис”
-1997г.- СОУ “Емилиян Станев”, паралелка със засилено изучаване на
-изобразително изкуство, гр. Велико Търново,
-От 2003г живее и работи във Варна.</p>
-                                <h3 class="animate" data-animation="fadeInLeft" data-delay="300">Изложби</h3>
-                                <p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor quis nostrud exercitation ullamco</p>
+                                <h3 class="animate" data-animation="fadeInLeft" data-delay="200">{{ trans('about.education-heading') }}</h3>
+                                <p>{{ trans('about.education-summary') }}</p>
+                                <h3 class="animate" data-animation="fadeInLeft" data-delay="300">{{ trans('about.group-heading') }}</h3>
+                                <p>{{ trans('about.exhibitions-summary') }}</p>
                                
                             </div>
                         </div>

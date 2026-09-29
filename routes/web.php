@@ -26,11 +26,11 @@ Route::middleware(['setLocale'])->group(function () {
     Route::get('/gallery/{slug?}', [ShopController::class, 'gallery'])->name('gallery');
     Route::get('/contact', [ShopController::class, 'contact'])->name('contact');
     Route::get('/about', [ShopController::class, 'about'])->name('about');
-    Route::get('/artwork/{id}',[ShopController::class, 'show'])->name('single-artwork');
-});
+    Route::get('/artwork/{artwork:slug}',[ShopController::class, 'show'])->name('single-artwork');
 
-Route::post('/contact',[ShopController::class, 'contactPost'])->name('contact-post')->middleware('throttle:5,1');
-Route::post('/more-info/{artwork_id}',[ShopController::class, 'moreInformation'])->name('more-information')->middleware('throttle:5,1');
+    Route::post('/contact',[ShopController::class, 'contactPost'])->name('contact-post')->middleware('throttle:5,1');
+    Route::post('/more-info/{artwork:slug}',[ShopController::class, 'moreInformation'])->name('more-information')->middleware('throttle:5,1');
+});
 Route::get('change-language/{lang}',[ShopController::class,'changeLanguage'])->name('change-language');
 
 Route::get('/edit-gallery',[ShopController::class,'editGallery'])->name('edit-gallery');

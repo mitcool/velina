@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Artwork extends Model
 {
@@ -11,6 +12,7 @@ class Artwork extends Model
         'description',
         'name_en',
         'description_en',
+        'slug',
         'price',
         'image',
         'stock',
@@ -18,6 +20,29 @@ class Artwork extends Model
         'is_selected',
         'period'
     ];
+
+    protected static function booted()
+    {
+        // Only fill an empty slug, so renaming an artwork doesn't break existing links
+        static::saving(function (Artwork $artwork) {
+            if (empty($artwork->slug)) {
+                $artwork->slug = static::uniqueSlug($artwork->name_en ?: $artwork->name, $artwork->id);
+            }
+        });
+    }
+
+    public static function uniqueSlug($title, $ignoreId = null)
+    {
+        $base = Str::slug($title, '-', 'bg') ?: 'artwork';
+        $slug = $base;
+        $i = 2;
+
+        while (static::where('slug', $slug)->when($ignoreId, fn ($q) => $q->where('id', '!=', $ignoreId))->exists()) {
+            $slug = $base.'-'.$i++;
+        }
+
+        return $slug;
+    }
 
     public function name(){
         if(app()->currentLocale()=='bg'){

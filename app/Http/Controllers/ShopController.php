@@ -151,17 +151,15 @@ class ShopController extends Controller
         return redirect()->back();
     }
 
-    public function show($id){
-        $artwork = Artwork::find($id) ?? about(404);
+    public function show(Artwork $artwork){
         return view('single-artwork')
             ->with('artwork',$artwork);
     }
 
-    public function moreInformation(Request $request,$artwork_id){
+    public function moreInformation(Request $request, Artwork $artwork){
         if ($request->filled('website')) {
             abort(403);
         }
-        $artwork = Artwork::find($artwork_id) ?? abourt(404);
 
         $request->validate([
             'name' => 'required|string|max:100',
@@ -175,6 +173,6 @@ class ShopController extends Controller
             info($e->getMessage());
         }
 
-        return redirect()->back();
+        return redirect()->back()->with('success', trans('artwork.success'));
     }
 }
