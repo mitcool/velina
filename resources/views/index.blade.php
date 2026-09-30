@@ -5,6 +5,21 @@
         <meta name="description" content="{{ trans('welcome.meta-description') }}">
         <meta name="author" content="Velina Grebenska">
        @endsection
+
+       @section('lang-switcher')
+        @if(app()->currentLocale()=='en')
+            <a href="{{ route('welcome-bg') }}" rel="nofollow">
+                 BG
+                <span class="fa fa-globe"></span>
+            </a>
+            @else
+             <a href="{{ route('welcome') }}" rel="nofollow">
+                EN
+                <span class="fa fa-globe"></span>
+            </a>
+            @endif
+                        
+       @endsection
        @section('content')
         <div class="slider-container">
             <div fetchpriority="high" class="slider fullwidth-section parallax" style="background-size:cover;"></div>

@@ -4,21 +4,21 @@
         <span class="dt-menu-toggle-icon"></span>
     </div>            	
     <ul class="menu type1" style="display:flex;justify-content:center;width:100%">
-        <li class="{{ request()->route()->getName() =='welcome' ? ' current_page_item ' : '' }} menu-item-simple-parent">
-            <a href="{{ route('welcome') }}">
+        <li class="{{ (request()->route()->getName() =='welcome' || request()->route()->getName() =='welcome-bg') ? ' current_page_item ' : '' }} menu-item-simple-parent">
+            <a href="{{ request()->segment(1) == 'bg' ? route('welcome-bg') : route('welcome') }}">
                    {{ trans('welcome.home') }}
                 <span class="fa fa-home"></span>
             </a>
                                 </li>
-        <li class="{{ request()->route()->getName() =='about' ? ' current_page_item ' : '' }} menu-item-simple-parent">
-            <a href="{{route('about')}}">
+        <li class="{{ ( request()->route()->getName() =='about' || request()->route()->getName() =='about-bg') ? ' current_page_item ' : '' }} menu-item-simple-parent">
+            <a href="{{request()->segment(1) == 'bg' ? route('about-bg') : route('about')}}">
                  {{ trans('welcome.about') }}
                 <span  class="fas fa-user"></span>
             </a>
         </li>
 
-         <li class="{{ request()->route()->getName() =='gallery' ? ' current_page_item ' : '' }} menu-item-simple-parent">
-            <a href="{{ route('gallery') }}"> {{ trans('welcome.gallery') }} <span class="fa fa-camera-retro"></span></a>
+         <li class="{{ (request()->route()->getName() =='gallery' || request()->route()->getName() =='gallery-bg')  ? ' current_page_item ' : '' }} menu-item-simple-parent">
+            <a href="{{ request()->segment(1) == 'bg' ? route('gallery-bg') : route('gallery') }}"> {{ trans('welcome.gallery') }} <span class="fa fa-camera-retro"></span></a>
             <ul class="sub-menu">
                 @foreach($categories as $category)
                     <li>
@@ -35,18 +35,7 @@
             </a>
         </li>
         <li>
-            @if(app()->currentLocale()=='en')
-            <a href="{{ route('change-language','en') }}" rel="nofollow">
-                 BG
-                <span class="fa fa-globe"></span>
-            </a>
-            @else
-             <a href="{{ route('change-language','en') }}" rel="nofollow">
-                EN
-                <span class="fa fa-globe"></span>
-            </a>
-            @endif
-                               
+            @yield('lang-switcher')       
         </li>
                                          
     </ul>

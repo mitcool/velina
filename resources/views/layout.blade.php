@@ -12,7 +12,7 @@
     	<div id="header-wrapper" class="dt-sticky-menu"> <!-- **header-wrapper Starts** -->
 			<div id="header" class="header" style="background: rgba(255, 255, 255, 0.8);">
             	<div class="container menu-container">
-                    <a class="logo" href="{{ route('welcome') }}">
+                    <a class="logo" href="{{ request()->segment(1) == 'bg' ? route('welcome-bg') : route('welcome') }}">
                         <h1 style="font-family: Londrina Outline, sans-serif;"><span style="font-family: 'Josefin Sans', sans-serif;color:#a81c51;font-weight:bold;text-transform:uppercase;">Velina </span> <span style="color:black;text-shadow: 1px 1px 2px black;"> Grebenska </span></h1>
                            
                         {{-- <img alt="Logo" src="{{ asset('images/logo.png') }}" style="width: 20%;"></a> --}}

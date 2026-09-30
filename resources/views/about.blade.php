@@ -5,7 +5,20 @@
     <meta name="description" content="{{ trans('about.meta-description') }}">
     <meta name="author" content="Velina Grebenska">
 @endsection
-
+@section('lang-switcher')
+        @if(app()->currentLocale()=='en')
+            <a href="{{ route('about-bg') }}" rel="nofollow">
+                 BG
+                <span class="fa fa-globe"></span>
+            </a>
+            @else
+             <a href="{{ route('about') }}" rel="nofollow">
+                EN
+                <span class="fa fa-globe"></span>
+            </a>
+            @endif
+                        
+       @endsection
 @section('css')
 
 <style>

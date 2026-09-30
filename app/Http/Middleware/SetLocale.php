@@ -20,7 +20,7 @@ class SetLocale
          $supportedLocales = ['en', 'bg'];
 
         // Retrieve locale from session or cookie
-        $locale = session('locale') ?? config('app.locale');
+        $locale = request()->segment(1) ?? 'en';
 
         // Validate locale
         if (!in_array($locale, $supportedLocales)) {

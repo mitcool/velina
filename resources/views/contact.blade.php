@@ -6,6 +6,21 @@
     <meta name="author" content="Velina Grebenska">
     @endsection
 
+    @section('lang-switcher')
+        @if(app()->currentLocale()=='en')
+            <a href="{{ route('contact-bg') }}" rel="nofollow">
+                 BG
+                <span class="fa fa-globe"></span>
+            </a>
+            @else
+             <a href="{{ route('contact') }}" rel="nofollow">
+                EN
+                <span class="fa fa-globe"></span>
+            </a>
+            @endif
+                        
+       @endsection
+
 @section('content')
 <!-- **Wrapper** -->
 <div class="wrapper">

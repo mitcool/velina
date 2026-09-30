@@ -23,14 +23,26 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['setLocale'])->group(function () {
 
     Route::get('/', [ShopController::class, 'index'])->name('welcome');
-    Route::get('/gallery/{slug?}', [ShopController::class, 'gallery'])->name('gallery');
-    Route::get('/contact', [ShopController::class, 'contact'])->name('contact');
-    Route::get('/about', [ShopController::class, 'about'])->name('about');
-    Route::get('/artwork/{artwork:slug}',[ShopController::class, 'show'])->name('single-artwork');
 
-    Route::post('/contact',[ShopController::class, 'contactPost'])->name('contact-post')->middleware('throttle:5,1');
-    Route::post('/more-info/{artwork:slug}',[ShopController::class, 'moreInformation'])->name('more-information')->middleware('throttle:5,1');
+    Route::group(['prefix' => 'en'],function (){
+        Route::get('/gallery/{slug?}', [ShopController::class, 'gallery'])->name('gallery');
+        Route::get('/contact', [ShopController::class, 'contact'])->name('contact');
+        Route::get('/about', [ShopController::class, 'about'])->name('about');
+        Route::get('/artwork/{artwork:slug}',[ShopController::class, 'show'])->name('single-artwork');
+    });
+    Route::group(['prefix' => 'bg'],function (){
+        Route::get('/', [ShopController::class, 'index'])->name('welcome-bg');
+        Route::get('/gallery/{slug?}', [ShopController::class, 'gallery'])->name('gallery-bg');
+        Route::get('/contact', [ShopController::class, 'contact'])->name('contact-bg');
+        Route::get('/about', [ShopController::class, 'about'])->name('about-bg');
+        Route::get('/artwork/{artwork:slug}',[ShopController::class, 'show'])->name('single-artwork-bg');
+    });
+
+    
 });
+
+Route::post('/contact',[ShopController::class, 'contactPost'])->name('contact-post')->middleware('throttle:5,1');
+    Route::post('/more-info/{artwork:slug}',[ShopController::class, 'moreInformation'])->name('more-information')->middleware('throttle:5,1');
 Route::get('change-language/{lang}',[ShopController::class,'changeLanguage'])->name('change-language');
 
 Route::middleware('auth')->group(function () {

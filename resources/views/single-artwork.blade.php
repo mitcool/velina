@@ -6,6 +6,20 @@
     <meta name="author" content="Velina Grebenska">
 @endsection
 
+@section('lang-switcher')
+    @if(app()->currentLocale()=='en')
+        <a href="{{ route('single-artwork-bg',$artwork->slug) }}" rel="nofollow">
+            BG
+            <span class="fa fa-globe"></span>
+        </a>
+    @else
+        <a href="{{ route('single-artwork',$artwork->slug) }}" rel="nofollow">
+            EN
+            <span class="fa fa-globe"></span>
+        </a>
+    @endif
+                
+@endsection
 @section('css')
 
 <style>
