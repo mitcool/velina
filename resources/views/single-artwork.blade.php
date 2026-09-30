@@ -225,18 +225,21 @@
 
             <div class="image-section">
             
-                <img src="{{ asset('images/artwork') }}/{{ $artwork->image }}" alt="{{ $artwork->name() }}">
+                <img 
+                    src="{{ asset('images/artwork') }}/{{ $artwork->image }}" 
+                    alt="{{ $artwork->attribute?->alt() }}"
+                    title="{{ $artwork->attribute?->title() }}"{{ $artwork->name() }}">
                 
                 <p class="share-text" style="text-align:right;margin-top:10px;margin-left:auto;margin-right:auto;">
                     {{ trans('artwork.share') }}&nbsp;  
                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(request()->url()) }}" target="_blank" aria-label="{{ trans('artwork.share-facebook') }}">
-                        <i style="color:#a81c51;font-size:1.2rem;" class="fa fa-brands fa-facebook"></i>
+                        <i style="color:#a81c51;font-size:1.5rem;" class="fa fa-brands fa-facebook"></i>
                     </a>&nbsp; 
                     <a href="https://www.reddit.com/submit?url={{ urlencode(request()->url()) }}" target="_blank" aria-label="{{ trans('artwork.share-reddit') }}">
-                        <i style="color:#a81c51;font-size:1.2rem;" class="fa fa-brands fa-reddit"></i>
+                        <i style="color:#a81c51;font-size:1.5rem;" class="fa fa-brands fa-reddit"></i>
                     </a>&nbsp;
                     <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-                        <i style="color:#a81c51;font-size:1.2rem;" class="fa fa-brands fa-instagram"></i>
+                        <i style="color:#a81c51;font-size:1.5rem;" class="fa fa-brands fa-instagram"></i>
                     </a>
                 </p>
             </div>

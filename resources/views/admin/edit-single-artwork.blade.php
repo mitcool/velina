@@ -57,6 +57,46 @@
       >
     </div>
     <div>
+      <label class="block text-sm font-medium text-gray-700 mb-1">Alt текст на снимката (Български) (опционално)</label>
+      <input
+        name="alt"
+        type="text"
+        maxlength="255"
+        value="{{ old('alt', $artwork->attribute?->alt) }}"
+        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+    </div>
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-1">Alt текст на снимката (Английски) (опционално)</label>
+      <input
+        name="alt_en"
+        type="text"
+        maxlength="255"
+        value="{{ old('alt_en', $artwork->attribute?->alt_en) }}"
+        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+    </div>
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-1">Title на снимката (Български) (опционално)</label>
+      <input
+        name="title"
+        type="text"
+        maxlength="255"
+        value="{{ old('title', $artwork->attribute?->title) }}"
+        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+    </div>
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-1">Title на снимката (Английски) (опционално)</label>
+      <input
+        name="title_en"
+        type="text"
+        maxlength="255"
+        value="{{ old('title_en', $artwork->attribute?->title_en) }}"
+        class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+    </div>
+    <div>
       <label class="block text-sm font-medium text-gray-700 mb-1">Категория</label>
       <select
         name="category_id"

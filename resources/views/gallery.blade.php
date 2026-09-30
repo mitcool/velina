@@ -41,7 +41,11 @@
                         @foreach($artworks as $artwork)
                             <div class="portfolio {{ $artwork->period_details->name }} street nature people still-life dt-sc-one-fourth">
                                 <figure>
-                                    <img src="{{ asset('images/artwork/') }}/{{ $artwork->image }}" alt="" title="">
+                                    <img 
+                                        src="{{ asset('images/artwork/') }}/{{ $artwork->image }}" 
+                                        alt="{{ $artwork->attribute?->alt() }}"
+                                        title="{{ $artwork->attribute?->title() }}"
+                                    />
                                     <figcaption>
                                         <div class="portfolio-detail">
                                             <div class="views">

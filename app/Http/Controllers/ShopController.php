@@ -93,17 +93,25 @@ class ShopController extends Controller
 
     public function updateArtwork(Request $request,$id){
         $artwork = $request->validate($this->artworkRules());
+        $attributes = $request->validate([
+            'alt' => ['nullable', 'string', 'max:255'],
+            'alt_en' => ['nullable', 'string', 'max:255'],
+            'title' => ['nullable', 'string', 'max:255'],
+            'title_en' => ['nullable', 'string', 'max:255'],
+        ]);
 
-        
         if($request->hasFile('file')){
             $path = base_path()."/public/images/artwork";
             $artwork['image'] = $this->upload_file($request->file('file'),$path);
         }
-        
+
         $artwork['price'] = 300;
         $artwork['stock'] = 1;
         $artwork['is_selected'] = $request->is_selected ? 1 : 0;
-        Artwork::findOrFail($id)->update($artwork);
+        $model = Artwork::findOrFail($id);
+        $model->update($artwork);
+        $model->attribute()->updateOrCreate([], $attributes);
+
         return redirect()->back();
     }
 

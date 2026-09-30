@@ -9,8 +9,8 @@
                             <li style="min-height:500px;display:flex:justify-content:center;">
                                 <img
                                     src="{{ asset('images/artwork') }}/{{ $pastel_artwork->image }}"
-                                    alt=""
-                                    title=""
+                                    alt="{{ $pastel_artwork->attribute?->alt() }}"
+                                    title="{{ $pastel_artwork->attribute?->title() }}"
                                     style="width: auto;height:500px;margin:0 auto;"
 
                                 />
@@ -48,8 +48,8 @@
                         <li style="min-height:500px;display:flex:justify-content:center;">
                             <img
                                 src="{{ asset('images/artwork') }}/{{ $akvarel_artwork->image }}"
-                                alt=""
-                                title=""
+                                alt="{{ $akvarel_artwork->attribute?->alt() }}"
+                                title="{{ $akvarel_artwork->attribute?->title() }}"
                                 style="width: auto;height:500px;margin:0 auto;"
 
                             />
@@ -68,8 +68,9 @@
                             <li style="min-height:500px;display:flex:justify-content:center;">
                                 <img
                                     src="{{ asset('images/artwork') }}/{{ $masleni_artwork->image }}"
-                                    alt=""
-                                    title="" style="width: auto;height:500px;margin:0 auto;"
+                                    alt="{{ $masleni_artwork->attribute?->alt() }}"
+                                    title="{{ $masleni_artwork->attribute?->title() }}"
+                                    style="width: auto;height:500px;margin:0 auto;"
 
                                 />
                             </li>
@@ -105,8 +106,8 @@
                             <li style="min-height:500px;display:flex;justify-content:center;width:100%;">
                                 <img
                                     src="{{ asset('images/artwork') }}/{{ $other_artwork->image }}"
-                                    alt=""
-                                    title=""
+                                    alt="{{ $other_artwork->attribute?->alt() }}"
+                                    title="{{ $other_artwork->attribute?->title() }}"
                                     style="width: auto;height:500px;margin:0 auto;"
                                     />
                             </li>

@@ -62,4 +62,7 @@ class Artwork extends Model
     public function period_details(){
         return $this->hasOne('App\Models\PicturePeriod','id','period');
     }
+    public function attribute(){
+        return $this->hasOne('App\Models\ArtworkAttribute','artwork_id','id');
+    }
 }
