@@ -6,6 +6,7 @@ use App\Http\Controllers\ShopController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\Admin\ArtworkController;
+use App\Http\Controllers\SitemapController;
 
 
 
@@ -43,6 +44,7 @@ Route::middleware(['setLocale'])->group(function () {
 
 Route::post('/contact',[ShopController::class, 'contactPost'])->name('contact-post')->middleware('throttle:5,1');
     Route::post('/more-info/{artwork:slug}',[ShopController::class, 'moreInformation'])->name('more-information')->middleware('throttle:5,1');
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 Route::get('change-language/{lang}',[ShopController::class,'changeLanguage'])->name('change-language');
 
 Route::middleware('auth')->group(function () {
